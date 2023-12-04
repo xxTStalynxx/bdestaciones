@@ -5,7 +5,7 @@
 -- Dumped from database version 11.22
 -- Dumped by pg_dump version 11.22
 
--- Started on 2023-12-04 15:43:05
+-- Started on 2023-12-04 15:58:43
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -17,6 +17,354 @@ SET check_function_bodies = false;
 SET xmloption = content;
 SET client_min_messages = warning;
 SET row_security = off;
+
+SET default_tablespace = '';
+
+SET default_with_oids = false;
+
+--
+-- TOC entry 209 (class 1259 OID 17599)
+-- Name: admins; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.admins (
+    id_admin integer NOT NULL,
+    nombre character varying(50) NOT NULL,
+    contrasena character varying(100) NOT NULL
+);
+
+
+ALTER TABLE public.admins OWNER TO postgres;
+
+--
+-- TOC entry 208 (class 1259 OID 17597)
+-- Name: admins_id_admin_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE public.admins_id_admin_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.admins_id_admin_seq OWNER TO postgres;
+
+--
+-- TOC entry 2886 (class 0 OID 0)
+-- Dependencies: 208
+-- Name: admins_id_admin_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE public.admins_id_admin_seq OWNED BY public.admins.id_admin;
+
+
+--
+-- TOC entry 203 (class 1259 OID 17571)
+-- Name: equipo; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.equipo (
+    id_miembro integer NOT NULL,
+    nombre character varying(50) NOT NULL,
+    cargo character varying(50) NOT NULL,
+    correo character varying(50) NOT NULL,
+    foto character varying(100) NOT NULL
+);
+
+
+ALTER TABLE public.equipo OWNER TO postgres;
+
+--
+-- TOC entry 202 (class 1259 OID 17569)
+-- Name: equipo_id_miembro_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE public.equipo_id_miembro_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.equipo_id_miembro_seq OWNER TO postgres;
+
+--
+-- TOC entry 2887 (class 0 OID 0)
+-- Dependencies: 202
+-- Name: equipo_id_miembro_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE public.equipo_id_miembro_seq OWNED BY public.equipo.id_miembro;
+
+
+--
+-- TOC entry 197 (class 1259 OID 17541)
+-- Name: estaciones; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.estaciones (
+    id_estacion integer NOT NULL,
+    nombre character varying(100) NOT NULL,
+    parroquia character varying(100) NOT NULL,
+    canton character varying(100) NOT NULL,
+    latitud numeric(10,2) NOT NULL,
+    longitud numeric(10,2) NOT NULL,
+    altura numeric(10,2) NOT NULL,
+    imagen character varying(100) NOT NULL
+);
+
+
+ALTER TABLE public.estaciones OWNER TO postgres;
+
+--
+-- TOC entry 196 (class 1259 OID 17539)
+-- Name: estaciones_id_estacion_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE public.estaciones_id_estacion_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.estaciones_id_estacion_seq OWNER TO postgres;
+
+--
+-- TOC entry 2888 (class 0 OID 0)
+-- Dependencies: 196
+-- Name: estaciones_id_estacion_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE public.estaciones_id_estacion_seq OWNED BY public.estaciones.id_estacion;
+
+
+--
+-- TOC entry 201 (class 1259 OID 17560)
+-- Name: mantenimiento; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.mantenimiento (
+    id_mantenimiento integer NOT NULL,
+    nombre character varying(50) NOT NULL,
+    descripcion character varying(150) NOT NULL,
+    detalle text NOT NULL,
+    imagen character varying(100) NOT NULL
+);
+
+
+ALTER TABLE public.mantenimiento OWNER TO postgres;
+
+--
+-- TOC entry 200 (class 1259 OID 17558)
+-- Name: mantenimiento_id_mantenimiento_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE public.mantenimiento_id_mantenimiento_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.mantenimiento_id_mantenimiento_seq OWNER TO postgres;
+
+--
+-- TOC entry 2889 (class 0 OID 0)
+-- Dependencies: 200
+-- Name: mantenimiento_id_mantenimiento_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE public.mantenimiento_id_mantenimiento_seq OWNED BY public.mantenimiento.id_mantenimiento;
+
+
+--
+-- TOC entry 205 (class 1259 OID 17579)
+-- Name: mapas; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.mapas (
+    id_mapa integer NOT NULL,
+    anio integer NOT NULL,
+    mes character varying(20) NOT NULL,
+    num_mes integer NOT NULL,
+    descripcion character varying(150),
+    imagen character varying(100) NOT NULL
+);
+
+
+ALTER TABLE public.mapas OWNER TO postgres;
+
+--
+-- TOC entry 204 (class 1259 OID 17577)
+-- Name: mapas_id_mapa_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE public.mapas_id_mapa_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.mapas_id_mapa_seq OWNER TO postgres;
+
+--
+-- TOC entry 2890 (class 0 OID 0)
+-- Dependencies: 204
+-- Name: mapas_id_mapa_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE public.mapas_id_mapa_seq OWNED BY public.mapas.id_mapa;
+
+
+--
+-- TOC entry 207 (class 1259 OID 17587)
+-- Name: noticias; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.noticias (
+    id_noticia integer NOT NULL,
+    titulo character varying(100) NOT NULL,
+    contenido text NOT NULL,
+    fecha timestamp without time zone DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    imagen character varying(100) NOT NULL
+);
+
+
+ALTER TABLE public.noticias OWNER TO postgres;
+
+--
+-- TOC entry 206 (class 1259 OID 17585)
+-- Name: noticias_id_noticia_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE public.noticias_id_noticia_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.noticias_id_noticia_seq OWNER TO postgres;
+
+--
+-- TOC entry 2891 (class 0 OID 0)
+-- Dependencies: 206
+-- Name: noticias_id_noticia_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE public.noticias_id_noticia_seq OWNED BY public.noticias.id_noticia;
+
+
+--
+-- TOC entry 199 (class 1259 OID 17549)
+-- Name: sensores; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.sensores (
+    id_sensor integer NOT NULL,
+    nombre character varying(50) NOT NULL,
+    descripcion text NOT NULL,
+    imagen character varying(100) NOT NULL
+);
+
+
+ALTER TABLE public.sensores OWNER TO postgres;
+
+--
+-- TOC entry 198 (class 1259 OID 17547)
+-- Name: sensores_id_sensor_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE public.sensores_id_sensor_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.sensores_id_sensor_seq OWNER TO postgres;
+
+--
+-- TOC entry 2892 (class 0 OID 0)
+-- Dependencies: 198
+-- Name: sensores_id_sensor_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE public.sensores_id_sensor_seq OWNED BY public.sensores.id_sensor;
+
+
+--
+-- TOC entry 2731 (class 2604 OID 17602)
+-- Name: admins id_admin; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.admins ALTER COLUMN id_admin SET DEFAULT nextval('public.admins_id_admin_seq'::regclass);
+
+
+--
+-- TOC entry 2727 (class 2604 OID 17574)
+-- Name: equipo id_miembro; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.equipo ALTER COLUMN id_miembro SET DEFAULT nextval('public.equipo_id_miembro_seq'::regclass);
+
+
+--
+-- TOC entry 2724 (class 2604 OID 17544)
+-- Name: estaciones id_estacion; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.estaciones ALTER COLUMN id_estacion SET DEFAULT nextval('public.estaciones_id_estacion_seq'::regclass);
+
+
+--
+-- TOC entry 2726 (class 2604 OID 17563)
+-- Name: mantenimiento id_mantenimiento; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.mantenimiento ALTER COLUMN id_mantenimiento SET DEFAULT nextval('public.mantenimiento_id_mantenimiento_seq'::regclass);
+
+
+--
+-- TOC entry 2728 (class 2604 OID 17582)
+-- Name: mapas id_mapa; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.mapas ALTER COLUMN id_mapa SET DEFAULT nextval('public.mapas_id_mapa_seq'::regclass);
+
+
+--
+-- TOC entry 2729 (class 2604 OID 17590)
+-- Name: noticias id_noticia; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.noticias ALTER COLUMN id_noticia SET DEFAULT nextval('public.noticias_id_noticia_seq'::regclass);
+
+
+--
+-- TOC entry 2725 (class 2604 OID 17552)
+-- Name: sensores id_sensor; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.sensores ALTER COLUMN id_sensor SET DEFAULT nextval('public.sensores_id_sensor_seq'::regclass);
+
 
 --
 -- TOC entry 2880 (class 0 OID 17599)
@@ -187,7 +535,7 @@ SELECT pg_catalog.setval('public.noticias_id_noticia_seq', 3, true);
 SELECT pg_catalog.setval('public.sensores_id_sensor_seq', 6, true);
 
 
--- Completed on 2023-12-04 15:43:06
+-- Completed on 2023-12-04 15:58:44
 
 --
 -- PostgreSQL database dump complete
