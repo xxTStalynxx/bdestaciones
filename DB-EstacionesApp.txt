@@ -1,0 +1,118 @@
+CREATE DATABASE estacionapp;
+USE estacionapp;
+
+CREATE TABLE estaciones(
+    id_estacion INT(5) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(100) NOT NULL,
+    parroquia VARCHAR(100) NOT NULL,
+    canton VARCHAR(100) NOT NULL,
+    latitud DECIMAL(10, 2) NOT NULL,
+    longitud DECIMAL(10, 2) NOT NULL,
+    altura DECIMAL(10, 2) NOT NULL,
+    imagen VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE sensores(
+    id_sensor INT(5) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(50) NOT NULL,
+    descripcion TEXT NOT NULL,
+    imagen VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE mantenimiento(
+    id_mantenimiento INT(5) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(50) NOT NULL,
+    descripcion VARCHAR(150) NOT NULL,
+    detalle TEXT NOT NULL,
+    imagen VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE equipo(
+    id_miembro INT(5) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(50) NOT NULL,
+    cargo VARCHAR(50) NOT NULL,
+    correo VARCHAR(50) NOT NULL,
+    foto VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE mapas(
+    id_mapa INT(5) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    anio INT(5) NOT NULL,
+    mes VARCHAR(20) NOT NULL,
+    num_mes INT(2) NOT NULL,
+    descripcion VARCHAR(150),
+    imagen VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE noticias(
+    id_noticia INT(5) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    titulo VARCHAR(100) NOT NULL,
+    contenido TEXT NOT NULL,
+    fecha TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    imagen VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE admins(
+    id_admin TINYINT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(50) NOT NULL,
+    contrasena VARCHAR(100) NOT NULL
+);
+
+///////////////PostgreSQL//////////////////////
+
+CREATE TABLE estaciones(
+    id_estacion SERIAL PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    parroquia VARCHAR(100) NOT NULL,
+    canton VARCHAR(100) NOT NULL,
+    latitud DECIMAL(10, 2) NOT NULL,
+    longitud DECIMAL(10, 2) NOT NULL,
+    altura DECIMAL(10, 2) NOT NULL,
+    imagen VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE sensores(
+    id_sensor SERIAL PRIMARY KEY,
+    nombre VARCHAR(50) NOT NULL,
+    descripcion TEXT NOT NULL,
+    imagen VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE mantenimiento(
+    id_mantenimiento SERIAL PRIMARY KEY,
+    nombre VARCHAR(50) NOT NULL,
+    descripcion VARCHAR(150) NOT NULL,
+    detalle TEXT NOT NULL,
+    imagen VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE equipo(
+    id_miembro SERIAL PRIMARY KEY,
+    nombre VARCHAR(50) NOT NULL,
+    cargo VARCHAR(50) NOT NULL,
+    correo VARCHAR(50) NOT NULL,
+    foto VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE mapas(
+    id_mapa SERIAL PRIMARY KEY,
+    anio INT NOT NULL,
+    mes VARCHAR(20) NOT NULL,
+    num_mes INT NOT NULL,
+    descripcion VARCHAR(150),
+    imagen VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE noticias(
+    id_noticia SERIAL PRIMARY KEY,
+    titulo VARCHAR(100) NOT NULL,
+    contenido TEXT NOT NULL,
+    fecha TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    imagen VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE admins(
+    id_admin SERIAL PRIMARY KEY,
+    nombre VARCHAR(50) NOT NULL,
+    contrasena VARCHAR(100) NOT NULL
+);
