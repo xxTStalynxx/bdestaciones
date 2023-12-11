@@ -1,0 +1,159 @@
+/////////ESTACIONES////////
+
+Nombre: Estación Meteorológica Tunshi
+Parroquia: Licto
+Cantón: Riobamba
+Latitud: 9806678
+Longitud: 764087
+Altura: 2840
+
+Nombre: Estación Meteorológica Quimiag
+Parroquia: Quimiag
+Cantón: Riobamba
+Latitud: 9816392.86
+Longitud: 770083.61
+Altura: 2709
+
+Nombre: Estación Meteorológica Tixan
+Parroquia: Tixan
+Cantón: Alausi
+Latitud: 9761332
+Longitud: 749103
+Altura: 3546
+
+Nombre: Estación Meteorológica San Juan
+Parroquia: San Juan
+Cantón: Riobamba
+Latitud: 9818849
+Longitud: 746596
+Altura: 3232
+
+Nombre: Estación Meteorológica Alao
+Parroquia: Pungala
+Cantón: Riobamba
+Latitud: 9793173
+Longitud: 773499
+Altura: 3064
+
+Nombre: Estación Meteorológica Cumandá
+Parroquia: Cumandá
+Cantón: Cumandá
+Latitud: 9755579.92
+Longitud: 706262.4
+Altura: 330.95
+
+Nombre: Estación Meteorológica Multitud
+Parroquia: Multitud
+Cantón: Alausí
+Latitud: 9711374.13
+Longitud: 722699.63
+Altura: 1483
+
+Nombre: Estación Meteorológica Matus
+Parroquia: Matus
+Cantón: Penipe
+Latitud: 9827878
+Longitud: 777759
+Altura: 2704
+
+Nombre: Estación Meteorológica Atillo
+Parroquia: Cebadas
+Cantón: Guamote
+Latitud: 9758048
+Longitud: 772610
+Altura: 3467
+
+Nombre: Estación Meteorológica Guargualla
+Parroquia: Cebadas
+Cantón: Guamote
+Latitud: 9806678
+Longitud: 764087
+Altura: 1453
+
+/////////SENSORES////////
+
+Nombre: Pluviómetro
+Descripción: Se define como el producto líquido o sólido de la condensación del vapor de agua que cae de las nubes o el aire y se deposita en el suelo. La unidad de la precipitación es la profundidad lineal normalmente en milímetros para la precipitación liquida. El rango operacional de las dimensiones para las observaciones de cantidad total de agua líquida es de 0 a >400 mm. Muestreo automático: Se registran los totales de precipitación diarios y cada 30 minutos cortando a las 7:00 am, acumulando toda la lluvia que cae durante el día. El sensor se debe mantener a 1.5 metros sobre el suelo.
+
+Nombre: Piranómetro
+Descripción: La radiación difusa al llegar al suelo después de su primer paso a través de la atmósfera en conjunto con la radiación directa es en parte reflejada por el suelo hacia el espacio, la cual, posteriormente, es parcialmente reflejada nuevamente hacia el suelo por la atmósfera. Este proceso continúa indefinidamente. Su unidad es el W/m² (vatio por metro cuadrado). El rango operacional para la radiación es de 0 a 1373 W/m², este número es lo que se llama constante solar que se define como la máxima energía del sol que llega a la atmosfera superior de la tierra. Muestreo automático: Se registran el promedio, máxima, mínima de la radiación.
+
+Nombre: Piranómetro
+Descripción: La radiación global es la suma de la radiación directa y la radiación difusa, para OET esta es el elemento a medir. Su unidad es el W/m² (vatio por metro cuadrado). El rango operacional, para la radiación es de 0 a 1373 W/m², este número es lo que se llama constante solar que se define como la máxima energía del sol que llega a la atmosfera superior de la tierra. La exactitud requerida (margen del error) para la radiación global debe ser de ±2% y de ±5% para la radiación neta. Este requisito está de acuerdo con las regulaciones de OMM.
+
+Nombre: Suelo
+Descripción: Temperatura del suelo: -20 a +60°C, resolución de 0.1°C. Profundidades de medición: +5 cm, ±0 cm, -5 cm, -10 cm, -20 cm, -50 cm y -100 cm (±0 corresponde al nivel del suelo).
+
+Nombre: Temperatura y Humedad
+Descripción: La temperatura es la condición que determina la dirección del flujo neto de calor entre dos cuerpos. Esta describe un estado y es en ese modo una variable un poco inusual, dado que no puede ser directamente derivada de variables tangibles tales como masa o longitud. En meteorología se utiliza casi siempre la temperatura expresada en grados Celsius. El rango operacional, para las observaciones de la temperatura (del aire) a 150 centímetros sobre el suelo es +5 a +40°C. Esto se aplica a los valores momentáneos, promedios y a los extremos. El estándar de OMM es realmente -30 a +45°C. La humedad es la razón expresada en porcentaje, entre la presión de vapor observada y la tensión del vapor saturante con respecto al agua a la misma temperatura y presión. La unidad estándar válida para el Sistema Internacional es el porcentaje %. El rango establecido por la OMM, para las observaciones de humedad relativa es de 5 - 100%.
+
+Nombre: Viento
+Descripción: Se considera el viento como una cantidad vectorial de dos dimensiones establecidas por los números que representan su velocidad y dirección en un tiempo dado. La unidad estándar para la dirección del viento se da en grados dextrórsum (es decir en sentido de las agujas del reloj) a partir del norte o en la escala 0-36 o 0-360 donde 36 o 360 es el viento norte y 9 o 90 es el viento del este. Las unidades reconocidas por el Sistema Internacional son: para la velocidad del viento (m/s), para la dirección del viento (grados), y para la ráfaga del viento (m/s). El rango operacional para las observaciones de velocidad del viento y dirección dadas por el OMM son: la velocidad promedio del viento (0 - 70 m/s); las ráfagas del viento (5 -75 m/s); la dirección del viento (>0 y 360 grados).
+
+/////////MANTENIMIENTO////////
+
+Nombre: Anenómetro
+Descripción: Limpieza del anenómetro de las estaciones meteorológicas
+Detalle: Se recomienda hacer una inspección visual al menos una vez al mes, para verificar el estado del aparato y que tan libre gira sobre su propio eje y el giro de la hélice. Remplace los engranajes cuando empiece a escuchar sonidos o no giren libremente.
+
+Nombre: Pluviómetro
+Descripción: Limpieza de los pluviómetros de las estaciones meteorológicas
+Detalle: Tanto el pluviómetro manual como el automático TE525MM o TB-4 no requieren mayor mantenimiento, solo limpieza al menos una vez por semana para asegurarse que no haya suciedad, ni insectos que afecten el mecanismo para medir la cantidad de agua.
+
+Nombre: Temperatura y Humedad
+Descripción: Limpieza del sensor de temperatura ambiente y humedad
+Detalle: Al menos una vez por mes se debe revisar la cubierta protectora de radiación para evitar que se obstruya o se ensucie, es muy común que las avispas tomen está cubierta para construir su nido. Respecto a los termómetros de máxima y mínima tienen garantía de por vida siempre y cuando no se quiebren.
+
+Nombre: Piranómetro
+Descripción: Limpieza de los sensores de radiación solar
+Detalle: Estos son muy delicados, y al menos una vez al mes se deben de limpiar con un paño suave o aire comprimido. Revisar también que esté correctamente nivelado y que el orificio para que el agua escurra no esté obstruido.
+
+Nombre: Fumigar el terreno
+Descripción: Limpieza de las áreas verdes de las estaciones meteorológicas
+Detalle: Se requiere de una fumigación cada 15 dias y corte del pasto.
+
+/////////EQUIPO DE TRABAJO////////
+
+Nombre: Arquimides Haro Velastegui
+Cargo: Director del Proyecto
+Correo: aharo@espoch.edu.ec
+
+Nombre: Amalia Escudero Villa
+Cargo: Director Subrogante del Proyecto
+Correo: amalia.escudero@espoch.edu.ec 
+
+Nombre: Gabriela Tubon Usca
+Cargo: Docente Investigador
+Correo: gabriela.tubon@espoch.edu.ec
+
+Nombre: Luis Mullo Chicaiza
+Cargo: Investigador
+Correo: lantonio.mullo@espoch.edu.ec
+
+Nombre: Mariela Moreno Palacios
+Cargo: Técnico de investigación
+Correo: mariela.moreno@espoch.edu.ec
+
+Nombre: Romel Palaguachi Calle
+Cargo: Técnico de investigación
+Correo: romel.palaguachi@espoch.edu.ec
+
+Nombre: Carina Yaucan Villa
+Cargo: Técnico de investigación
+Correo: carina.yaucan@espoch.edu.ec
+
+Nombre: José Mejía López
+Cargo: Investigador externo
+Correo: jmejia@puc.cl
+
+Nombre: Lorena Peñaherrera Pita
+Cargo: Investigador externo
+Correo: lore_mabpp@hotmail.com
+
+Nombre: Víctor Loya Quinga
+Cargo: Investigador externo
+Correo: vhlqsa@gmail.com
+
+Nombre: Karina Montufar
+Cargo: Investigador externo
+Correo: kmontufar@inamhi.gob.ec
